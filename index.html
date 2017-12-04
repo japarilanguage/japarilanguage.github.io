@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -26,8 +27,8 @@
 </head>
 <body>
     <h1>JapariProgrammingLanguage Interpreter</h1>
-    <div><textarea name="Coding Hire" id="code" placeholder = "Coding here" ></textarea>  
-    <textarea name="Result Hire" id="result"  disabled placeholder = "Result"></textarea> </div>
+    <div><textarea name="Coding Hire" id="code" placeholder = "Coding here" ></textarea>  </div>
+    <p id="result"  ></p> 
     <button id = "run" onclick = "runCode()">Run!!</button>
     
 <script>
@@ -63,7 +64,7 @@
             case '안잡아먹거든' : memory[ptr]--; if(memory[ptr]<0)memory[ptr]=0xFF;break;
             case '움직여' : ptr++;break;
             case '가만있어' : ptr--;break;
-            case '말했다' : outputString += (memory[ptr] == 10)? '\n':(memory[ptr] == 32)? ' ':String.fromCharCode(memory[ptr]); break;
+            case '말했다' : outputString += (memory[ptr] == 10)? '<br>':(memory[ptr] == 32)? '&nbsp;':String.fromCharCode(memory[ptr]); break;
             case '만들었다고' : memory[ptr]= prompt("").charCodeAt(0)&0xFF;
             case '나야' : 
                 if (memory[ptr] == 0){
