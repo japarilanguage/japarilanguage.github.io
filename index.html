@@ -65,7 +65,7 @@
             case '움직여' : ptr++;break;
             case '가만있어' : ptr--;break;
             case '말했다' : outputString += (memory[ptr] == 10)? '<br>':(memory[ptr] == 32)? '&nbsp;':String.fromCharCode(memory[ptr]); break;
-            case '만들었다고' : memory[ptr]= prompt("").charCodeAt(0)&0xFF;
+            case '만들었다고' : memory[ptr]= prompt("").charCodeAt(0)&0xFF;break;
             case '나야' : 
                 if (memory[ptr] == 0){
                     var num = 0;
