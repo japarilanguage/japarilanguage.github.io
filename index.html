@@ -17,8 +17,8 @@
             display:block;
         }
         textarea{
-            width: 48%;
-            height: 800px;
+            width: 100%;
+            height: 400px;
         }
         div{
             align-items: center;
@@ -108,7 +108,7 @@
         for(index = 0;index < codeChar.length;index++){
             decodeCode(codeChar[index]);
         }
-        document.getElementById("result").value = outputString;
+        document.getElementById("result").innerHTML = outputString;
     }
 
 </script>
